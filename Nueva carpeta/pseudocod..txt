@@ -1,0 +1,65 @@
+INICIO
+    Mostrar "Bienvenido a la Máquina Expendedora"
+    Mostrar "Seleccione una categoría:"
+    Mostrar "1. Snacks"
+    Mostrar "2. Bebidas"
+    Mostrar "3. Dulces"
+    Leer opcionCategoria
+
+    SWITCH (opcionCategoria)
+        CASE 1:  // Snacks
+            Mostrar "Seleccione un snack:"
+            Mostrar "1. Papas fritas - S/.3"
+            Mostrar "2. Galletas - S/.2"
+            Leer opcionSnack
+            IF opcionSnack == 1 THEN
+                precio = 3
+                producto = "Papas fritas"
+            ELSE IF opcionSnack == 2 THEN
+                precio = 2
+                producto = "Galletas"
+            ELSE
+                Mostrar "Opción inválida"
+            FIN IF
+            BREAK
+
+        CASE 2:  // Bebidas
+            Mostrar "Seleccione una bebida:"
+            Mostrar "1. Agua - S/.2"
+            Mostrar "2. Refresco - S/.3"
+            Leer opcionBebida
+            IF opcionBebida == 1 THEN
+                precio = 2
+                producto = "Agua"
+            ELSE IF opcionBebida == 2 THEN
+                precio = 3
+                producto = "Refresco"
+            ELSE
+                Mostrar "Opción inválida"
+            FIN IF
+            BREAK
+
+        CASE 3:  // Dulces
+            Mostrar "Seleccione un dulce:"
+            Mostrar "1. Chocolate - S/.4"
+            Mostrar "2. Caramelo - S/.1"
+            Leer opcionDulce
+            IF opcionDulce == 1 THEN
+                precio = 4
+                producto = "Chocolate"
+            ELSE IF opcionDulce == 2 THEN
+                precio = 1
+                producto = "Caramelo"
+            ELSE
+                Mostrar "Opción inválida"
+            FIN IF
+            BREAK
+
+        DEFAULT:
+            Mostrar "Categoría inválida"
+    FIN SWITCH
+
+    Si producto definido entonces
+        Mostrar "Usted ha comprado " + producto + " por S/." + precio
+    FIN SI
+FIN
