@@ -1,0 +1,102 @@
+using System;
+using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp3
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Bienvenido al menu principal");
+            Console.WriteLine("1. Comida");
+            Console.WriteLine("2. Bebida");
+            Console.WriteLine("Seleccione una opcion:");
+            int opcion = int.Parse(Console.ReadLine());
+
+            double precio = 0.0;
+
+            switch (opcion)
+            {
+                case 1:
+
+                    Console.WriteLine("Selecciones una comida: ");
+                    Console.WriteLine("1. Arroz con pollo  ");
+                    Console.WriteLine("2. Ceviche");
+                    Console.WriteLine("3. Lomo saltado");
+                    int comida = int.Parse(Console.ReadLine());
+
+                    if (comida == 1)
+                    {
+
+                        precio = 12.50;
+                        Console.WriteLine("Usted ha seleccionado Arroz con pollo. Precio: $" + precio);
+
+                    }
+                    else if (comida == 2)
+                    {
+
+                        precio = 15.00;
+                        Console.WriteLine("Usted ha seleccionado Ceviche. Precio: $" + precio);
+                    }
+                    else if (comida == 3)
+                    {
+
+                        precio = 18.00;
+                        Console.WriteLine("Usted ha seleccionado Lomo saltado. Precio: $" + precio);
+                    }
+                    else
+                    {
+
+                        Console.WriteLine("Opcion no valida");
+                    }
+                    break;
+
+
+                case 2:
+                    Console.WriteLine("Seleccione una bebida: ");
+                    Console.WriteLine("1. Agua");
+                    Console.WriteLine("2. Gaseosa");
+                    Console.WriteLine("3. Jugo");
+                    int bebida = int.Parse(Console.ReadLine());
+                    if (bebida == 1)
+                    {
+                        precio = 2.00;
+                        Console.WriteLine("Usted ha seleccionado Agua. Precio: $" + precio);
+                    }
+                    else if (bebida == 2)
+                    {
+                        precio = 3.50;
+                        Console.WriteLine("Usted ha seleccionado Gaseosa. Precio: $" + precio);
+                    }
+                    else if (bebida == 3)
+                    {
+                        precio = 7.00;
+                        Console.WriteLine("Usted ha seleccionado Jugo. Precio: $" + precio);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Opcion no valida");
+                    }
+                    break;
+
+                default:
+                    Console.WriteLine("Opcion no valida en menu principal");
+                    break;
+            }
+
+            if (precio > 0)
+            {
+                Console.WriteLine("El precio total es: $" + precio);
+
+
+                Console.WriteLine("Gracias por su compra!");
+
+
+            }
+        }
+    }
+}
