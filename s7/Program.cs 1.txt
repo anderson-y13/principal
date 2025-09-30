@@ -1,0 +1,46 @@
+﻿using System;
+class Program
+{
+
+    static void Main()
+
+    {
+
+        int nota;
+        int suma = 0;
+        int contador = 0;
+        double promedio = 0;
+
+        Console.Write("Ingrese una nota (-1 para terminar): ");
+        nota = int.Parse(Console.ReadLine());
+
+
+        while (nota != -1) 
+        {
+            suma = suma + nota; 
+            contador++;      
+
+           Console.Write("Ingrese otra nota (-1 para terminar): ");
+           nota = int.Parse(Console.ReadLine());
+        }
+
+        if (contador > 0)
+        {
+            promedio = (double)suma / contador;
+
+            Console.WriteLine("\nResultados:");
+            Console.WriteLine("Suma total: " + suma);
+            Console.WriteLine("Número de notas: " + contador);
+            Console.WriteLine("Promedio: " + promedio);
+        }
+
+        else
+        {
+            Console.WriteLine("No se ingresaron notas.");
+        }
+
+        Console.ReadKey();
+
+    }
+
+}

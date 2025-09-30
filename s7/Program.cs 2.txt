@@ -1,0 +1,49 @@
+﻿using System;
+
+class Program
+
+{
+    static void Main()
+
+    {
+        int opcion; 
+
+        do
+
+        {
+
+            Console.WriteLine("Menú de Opciones:");
+            Console.WriteLine("1. Calcular Suma");
+            Console.WriteLine("2. Calcular Resta");
+            Console.WriteLine("3. Salir");
+            Console.Write("Ingrese una opción (1-3): ");
+
+            opcion = int.Parse(Console.ReadLine());
+
+            if (opcion < 1 || opcion > 3)
+
+            {
+                Console.WriteLine("Opción inválida. Intente nuevamente.\n");
+            }
+
+        } while (opcion < 1 || opcion > 3);
+ 
+        switch (opcion)
+
+        {
+            case 1:
+                Console.WriteLine("\nUsted eligió la opción Calcular Suma.");
+                break;
+
+            case 2:
+                Console.WriteLine("\nUsted eligió la opción Calcular Resta.");
+                break;
+
+            case 3:
+                Console.WriteLine("\nUsted eligió la opción Salir.");
+                break;
+        }
+
+    }
+
+}
